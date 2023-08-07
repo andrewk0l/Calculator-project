@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+<link rel="shortcut-icon" href="Icons/icons8-calculator-64.png">
+</head>
+<body>
+    <main class="main">
+        <div class="calculator">
+          <div class="screen">
+            <div class="default-screen" id="defaultOperationScreen"></div>
+            <div class="current-screen" id="currentOperationScreen">0</div>
+          </div>
+          <div class="buttons-box">
+            <button 
+            class="btn red-btn 2-grid"
+            id="clearBtn"
+            onclick="this.blur()">AC</button>
+
+            <button
+            class="btn blue-btn 2-grid"
+            id="deleteBtn"
+            onclick="this.blur()">Delete</button>
+
+          <button class="btn" onclick="this.blur();" number>7</button>
+          <button class="btn" onclick="this.blur();" number>8</button>
+          <button class="btn" onclick="this.blur();" number>9</button>
+          <button class="btn" onclick="this.blur();" operator>÷</button>
+
+          <button class="btn" onclick="this.blur();" number>4</button>
+          <button class="btn" onclick="this.blur();" number>5</button>
+          <button class="btn" onclick="this.blur();" number>6</button>
+          <button class="btn" onclick="this.blur();" operator>*</button>
+
+          <button class="btn" onclick="this.blur();" number>1</button>
+          <button class="btn" onclick="this.blur();" number>2</button>
+          <button class="btn" onclick="this.blur();" number>3</button>
+
+          <button class="btn" onclick="this.blur();" operator>-</button>
+
+          <button class="btn" onclick="this.blur();" id="pointBtn">.</button>
+          <button class="btn" onclick="this.blur();" number>0</button>
+          <button class="btn" onclick="this.blur();" id="equalsBtn">=</button>
+          <button class="btn" onclick="this.blur();" data-operator>+</button>
+
+        </div>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <p>
+            Copyright  ©
+            made by Oluwanifemi Ogedengbe 2023
+        </p>
+
+    </footer>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
