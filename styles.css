@@ -95,3 +95,54 @@ body {
     grid-column: span 2;
     padding: 10px 100px;
  }
+
+ .btn:hover {
+    background-color: var(--btn-hover);
+  }
+  
+  .btn:active {
+    background-color: var(--btn-active);
+  }
+  
+  .red-btn {
+    background-color: var(--btn-red);
+  }
+  
+  .red-btn:hover {
+    background-color: var(--btn-red-hover);
+  }
+  
+  .red-btn:active {
+    background-color: var(--btn-red-active);
+  }
+  
+  .blue-btn {
+    background-color: var(--btn-blue);
+  }
+  
+  .blue-btn:hover {
+    background-color: var(--btn-blue-hover);
+  }
+  
+  .blue-btn:active {
+    background-color: var(--btn-blue-active);
+  }
+  
+  input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+  }
