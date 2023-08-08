@@ -3,15 +3,15 @@
     --font: #0a0909;
     --border: #333;
     --screen: #eee;
-    --calculator: #aaa;
+    --calculator: #d31a1a;
     --btn: hsla(83, 45%, 94%, 0.952);
     --btn-hover: #d68c8c;
     --btn-active: #ccc;
-    --btn-red: rgb(221, 27, 27);
-    --btn-red-hover: rgb(206, 38, 38);
+    --btn-red: rgb(243, 161, 9);
+    --btn-red-hover: rgb(243, 235, 235);
     --btn-red-active: #d88;
     --btn-blue: rgb(22, 22, 189);
-    --btn-blue-hover: #99e;
+    --btn-blue-hover: rgb(232, 232, 238);
     --btn-blue-active: #88d;
   }
   
@@ -50,12 +50,17 @@ body {
   .btn {
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100px;
+    width: 99px;
+    height: 85px;
     background-color: var(--btn);
     border: 2px var(--border) solid;
-    border-radius: 5px;
     font-size: 20px;
+    cursor: pointer;
+    transition: all .15 ease-in-out;
+  border-radius: 2.5rem;
+   grid-gap: 0.5rem;
+   padding: 20px;
+  
   }
 
   .main {
@@ -73,6 +78,7 @@ body {
     border-radius: 15px;
     padding: 20px;
     background-color: var(--calculator);
+
   }
    .screen {
         padding: 30px 20px;
@@ -86,15 +92,21 @@ body {
    }
 
    .buttons-box {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    grid-template-columns: (4, 1fr) ;
+    grid-gap: 0.5rem;
+    padding: 20px;
+  border-radius: 5px;
    }
 
  .grid-2 {
     grid-column: span 2;
     padding: 10px 100px;
  }
+
+#equalsBtn {
+  grid-column: 3 / 5;
+  border-radius: 2.5rem;
+}
 
  .btn:hover {
     background-color: var(--btn-hover);
@@ -127,7 +139,6 @@ body {
   .blue-btn:active {
     background-color: var(--btn-blue-active);
   }
-  
   input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
