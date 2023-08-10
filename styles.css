@@ -48,19 +48,19 @@ body {
   }
    
   .btn {
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 99px;
+    width: 89px;
     height: 85px;
     background-color: var(--btn);
     border: 2px var(--border) solid;
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
-    transition: all .15 ease-in-out;
   border-radius: 2.5rem;
    grid-gap: 0.5rem;
    padding: 20px;
-  
+   
   }
 
   .main {
@@ -81,7 +81,7 @@ body {
 
   }
    .screen {
-        padding: 30px 20px;
+        padding: 60px 50px;
         border: 2px var(--border) solid;
         border-radius: 5px;
         margin-bottom: 80px;
@@ -89,13 +89,34 @@ body {
         text-align: right;
         word-wrap: break-word;
         word-break: break-all;
+        border-radius: 2.5rem;
+        background-color: #474343;
    }
 
    .buttons-box {
-    grid-template-columns: (4, 1fr) ;
+  display: grid;
+  grid-template-columns: (4, 1fr) ;
     grid-gap: 0.5rem;
     padding: 20px;
   border-radius: 5px;
+   }
+
+   .user-input {
+    position: relative;
+    top: -18px;
+    text-align: right;
+    font-weight: 400;
+    font-size: 30px;
+    color: rgb(46, 204, 46);
+   }
+
+   .result-screen {
+    position: relative;
+    bottom: -28px;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: right;
+    color: rgb(236, 233, 229);
    }
 
  .grid-2 {
@@ -106,7 +127,13 @@ body {
 #equalsBtn {
   grid-column: 3 / 5;
   border-radius: 2.5rem;
+  
 }
+
+#equalsBtn:hover {
+background-color: rgb(50, 211, 35);
+}
+
 
  .btn:hover {
     background-color: var(--btn-hover);
