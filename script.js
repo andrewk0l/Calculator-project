@@ -15,18 +15,37 @@ buttons.forEach(button => {
     });
 });
 
-const clearButton = document.getElementById('clearBtn');
-clearButton.addEventListener('click', () => {
+// Define a function to clear the calculator's input and result screens
+function clearCalculator() {
     userInput.textContent = '0';
     resultScreen.textContent = '0';
-    // Clear any stored data and reset variables
-});
+    // Handle additional clearing or resetting if needed
+}
 
-const equalsButton = document.getElementById('equalsBtn');
-equalsButton.addEventListener('click', () => {
+// Attach the function to the clear button click event
+const clearButton = document.getElementById('clearBtn');
+clearButton.addEventListener('click', clearCalculator);
+
+// Define a function to perform the calculation and update the result screen
+function performCalculation() {
     const expression = userInput.textContent;
-    console.log(expression)
-    const result = math.evaluate(expression); // Note: using eval() for simplicity, consider safer alternatives
+    const result = math.evaluate(expression); // Using math.js for safe evaluation
     resultScreen.textContent = result;
     // Handle storing or updating data related to the result
-});
+}
+
+// Attach the function to the equals button click event
+const equalsButton = document.getElementById('equalsBtn');
+equalsButton.addEventListener('click', performCalculation);
+
+// Define a function to delete the last inputed character
+function deleteLastInput() {
+    const currentInput = userInput.textContent;
+    userInput.textContent = currentInput.substring(0, currentInput.length - 1);
+    // Handle additional deletion logic if needed
+}
+
+// Attach the function to the delete button click event
+const deleteButton = document.getElementById('deleteBtn');
+deleteButton.addEventListener('click', deleteLastInput);
+

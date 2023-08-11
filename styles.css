@@ -47,7 +47,7 @@ body {
     outline: none;
   }
    
-  .btn {
+  .btn, .delete-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,7 +117,12 @@ body {
     font-size: 40px;
     text-align: right;
     color: rgb(236, 233, 229);
-   }
+      white-space: nowrap; /* Prevent line breaks */
+      overflow: hidden; /* Hide overflow */
+      text-overflow: ellipsis; /* Show ellipsis if content overflows */
+  }
+  
+   
 
  .grid-2 {
     grid-column: span 2;
