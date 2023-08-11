@@ -1,26 +1,32 @@
-const numberButtons = document.querySelectorAll(['number'])
-const operatorButtons = document.querySelectorAll(['operator'])
-const equalsButton = document.getElementById('equalsBtn')
-const pointButton = document.getElementById('pointBtn')
- const clearButton = document.getElementById('clearBtn')
- const deleteButton = document.getElementById('deleteBtn')
- const defaultOperationScreen = document.getElementById('defaultOperationScreen')
-const currentOperationScreen = document.getElementById('currentOperationScreen')
+const userInput = document.getElementById('user-input')
+const resultScreen = document.getElementById('result-screen')
+const buttons = document.querySelectorAll('.btn')
 
-window.addEventListener('keydown', keyboardInput)
- 
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const buttonValue = button.textContent;
+        const currentDisplay = userInput.textContent;
+// If the current display is '0', replace it with the button value
+        if (currentDisplay === '0') {
+            userInput.textContent = buttonValue;
+        } else {
+            userInput.textContent += buttonValue;
+        }
+    });
+});
 
-function keyboardInput(e) {
-    if (e.key >= 0 && e.key <= 9) appendNumber(e.key)
-    
-}
+const clearButton = document.getElementById('clearBtn');
+clearButton.addEventListener('click', () => {
+    userInput.textContent = '0';
+    resultScreen.textContent = '0';
+    // Clear any stored data and reset variables
+});
 
-function appendNumber(number) {
-    if (currentOperationScreen.textContent === '0')
-    currentOperationScreen.textContent += number
-  }
-  
-
-numberButtons.forEach((button) =>
-button.addEventListener('click', () => appendNumber(button.textContent))
-)
+const equalsButton = document.getElementById('equalsBtn');
+equalsButton.addEventListener('click', () => {
+    const expression = userInput.textContent;
+    console.log(expression)
+    const result = math.evaluate(expression); // Note: using eval() for simplicity, consider safer alternatives
+    resultScreen.textContent = result;
+    // Handle storing or updating data related to the result
+});

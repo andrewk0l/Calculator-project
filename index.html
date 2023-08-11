@@ -14,8 +14,8 @@
     <main class="main">
         <div class="calculator">
           <div class="screen">
-            <div class="user-input" id="userInput">0</div>
-            <div class="result-screen" id="resultScreen">0</div>
+            <div class="user-input" id="user-input">0</div>
+            <div class="result-screen" id="result-screen">0</div>
           </div>
           <div class="buttons-box">
             <button 
@@ -28,25 +28,25 @@
             id="deleteBtn"
             onclick="this.blur()">Delete</button>
 
-          <button class="btn" onclick="this.blur();" number>7</button>
-          <button class="btn" onclick="this.blur();" number>8</button>
-          <button class="btn" onclick="this.blur();" number>9</button>
+          <button class="btn" onclick="this.blur();" value="number">7</button>
+          <button class="btn" onclick="this.blur();" value="number">8</button>
+          <button class="btn" onclick="this.blur();" value="number">9</button>
           <button class="btn" onclick="this.blur();" operator>÷</button>
 
-          <button class="btn" onclick="this.blur();" number>4</button>
-          <button class="btn" onclick="this.blur();" number>5</button>
-          <button class="btn" onclick="this.blur();" number>6</button>
+          <button class="btn" onclick="this.blur();" value="number">4</button>
+          <button class="btn" onclick="this.blur();"value="number">5</button>
+          <button class="btn" onclick="this.blur();" value="number">6</button>
           <button class="btn" onclick="this.blur();" operator>*</button>
 
-          <button class="btn" onclick="this.blur();" number>1</button>
-          <button class="btn" onclick="this.blur();" number>2</button>
-          <button class="btn" onclick="this.blur();" number>3</button>
+          <button class="btn" onclick="this.blur();" value="number">1</button>
+          <button class="btn" onclick="this.blur();"value="number">2</button>
+          <button class="btn" onclick="this.blur();" value="number">3</button>
 
           <button class="btn" onclick="this.blur();" operator>-</button>
 
           <button class="btn" onclick="this.blur();" id="pointBtn">.</button>
-          <button class="btn" onclick="this.blur();" number>0</button>
-          <button class="btn" onclick="this.blur();" id="equalsBtn">=</button>
+          <button class="btn" onclick="this.blur();" value="number">0</button>
+          <button class="equalsbtn" onclick="this.blur();" id="equalsBtn">=</button>
           <button class="btn" onclick="this.blur();" data-operator>+</button>
 
         </div>
@@ -77,5 +77,6 @@
 
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.1.0/math.js"></script>
 </body>
 </html>
