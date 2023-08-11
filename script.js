@@ -29,9 +29,12 @@ clearButton.addEventListener('click', clearCalculator);
 // Define a function to perform the calculation and update the result screen
 function performCalculation() {
     const expression = userInput.textContent;
-    const result = math.evaluate(expression); // Using math.js for safe evaluation
-    resultScreen.textContent = result;
-    // Handle storing or updating data related to the result
+    try {
+        const result = math.evaluate(expression);
+        resultScreen.textContent = result;
+    } catch (error) {
+        resultScreen.textContent = 'Math Error'; // Display "Math Error" in result screen
+    }
 }
 
 // Attach the function to the equals button click event
