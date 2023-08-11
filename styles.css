@@ -81,10 +81,10 @@ body {
 
   }
    .screen {
-        padding: 60px 50px;
+        padding: 32px 50px;
         border: 2px var(--border) solid;
         border-radius: 5px;
-        margin-bottom: 80px;
+        margin-bottom: 20px;
         background-color: var(--screen);
         text-align: right;
         word-wrap: break-word;
@@ -122,6 +122,14 @@ body {
       text-overflow: ellipsis; /* Show ellipsis if content overflows */
   }
   
+  .calculator-name {
+    position: relative;
+    left: 92px;
+    bottom: 12px;
+    font-size: 40px;
+    font-weight: 700;
+    
+  }
    
 
  .grid-2 {
